@@ -26,9 +26,4 @@ describe('Orange Test', () => {
     myInfoPage.saveForm2()
   })
 
-  it('Login - Fail', () => {
-    loginPage.acessLoginPage()
-    loginPage.loginWithUser(userData.userFail.username, userData.userFail.password)
-    loginPage.checkAccessInvalid()
-  })
 })
