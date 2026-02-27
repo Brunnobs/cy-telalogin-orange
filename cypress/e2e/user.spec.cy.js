@@ -4,6 +4,9 @@ import DashboardPage from '../pages/dashboardPage.js'
 import MenuPages from '../pages/menuPages.js'
 import MyInfoPage from '../pages/myinfoPage.js'
 
+const Chance = require('chance')
+
+const chance = new Chance()
 const loginPage = new LoginPage()
 const dashboardPage = new DashboardPage()
 const menuPages = new MenuPages()
@@ -19,7 +22,7 @@ describe('Orange Test', () => {
 
     menuPages.accessMyInfo()
 
-    myInfoPage.fillPersonalDetail('Sara', 'Carolina', 'Connor', 'Sarinha')
+    myInfoPage.fillPersonalDetail(chance.first(), chance.first(), chance.last() /*,  quando chamar nickname chance.string({ length: 5 }) */ )
     myInfoPage.fillEmployeeDetails('123456', '654321', '123456789', '2034-12-31')
     myInfoPage.fillStatus('Brazilian', 'Married', '1980-04-01' , 'B-', 'Test') 
     myInfoPage.saveForm()
