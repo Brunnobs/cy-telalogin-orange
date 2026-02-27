@@ -97,7 +97,7 @@ npm -v
 Clone the repository:
 
 ```
-git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY.git
+git clone https://github.com/Brunnobs/cy-telalogin-orange.git
 ```
 
 Navigate to the project folder:
